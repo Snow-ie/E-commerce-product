@@ -29,7 +29,7 @@ modal_thumbnails.forEach((thumbnail) => {
   });
 });
 
-const closeModal = document.querySelector('img[src="./images/icon-close.svg"]');
+const closeModal = document.querySelector('img[src="images/icon-close.svg"]');
 
 closeModal.addEventListener("click", () => {
   main.style.background = "#fff";

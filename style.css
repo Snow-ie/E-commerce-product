@@ -6,7 +6,9 @@
   --Grayish-blue: hsl(220, 14%, 75%);
   --Light-grayish-blue: hsl(223, 64%, 98%);
   --White: hsl(0, 0%, 100%);
-  --Black/*(with 75% opacity for lightbox background)*/: hsl(0, 0%, 0%);
+  --Black
+  /*(with 75% opacity for lightbox background)*/
+  : hsl(0, 0%, 0%);
 }
 
 * {
@@ -26,40 +28,40 @@ body {
   height: 100vh;
   width: 100%;
   font-family: "Kumbh Sans", sans-serif;
-  max-width: 1400px;
+  max-width: 1366px;
   margin: auto;
 }
 
 header {
   height: 10vh;
-  border-bottom: 2px solid var(--Light-grayish-blue);
+  border-bottom: 2px solid hsl(223, 64%, 98%);
   display: flex;
   flex-direction: column;
   justify-content: center;
   position: relative;
 }
 
-.bars {
+.burger {
   visibility: hidden;
 }
 
-.bars > div {
+.burger > div {
   width: 25px;
   height: 3px;
   margin: 5px 0;
-  background-color: var(--Very-dark-blue);
-  transition: 0.5s ease;
+  background-color: hsl(220, 13%, 13%);
+  transition: transform 0.5s ease;
 }
 
 .navbar {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
 }
 
-#Logo > h1 {
+#Logo > h2 {
   font-weight: 700;
-  color: var(--Very-dark-blue);
+  color: hsl(220, 13%, 13%);
   font-size: 20px;
 }
 
@@ -79,11 +81,11 @@ header {
 .menu_items li a:hover {
   color: #000;
   padding-bottom: 3vh;
-  border-bottom: 1px solid var(--Orange);
+  border-bottom: 1px solid hsl(26, 100%, 55%);
   transition: all 0.5s ease;
 }
 
-.cart-sect {
+.cart_sect {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -93,7 +95,7 @@ header {
   position: absolute;
   top: 0;
   right: 0;
-  background-color: var(--Orange);
+  background-color: hsl(26, 100%, 55%);
   border-radius: 100%;
   height: 15px;
   width: 15px;
@@ -104,14 +106,14 @@ header {
   visibility: hidden;
 }
 
-.cart-btn {
+.cartBtn {
   width: 20px;
   margin-right: 10px;
   cursor: pointer;
   position: relative;
 }
 
-.cart-btn > img {
+.cartBtn > img {
   width: 100%;
 }
 
@@ -123,11 +125,11 @@ header {
 
 #avatar > img {
   width: 100%;
-  border: 2px solid var(--Light-grayish-blue);
+  border: 2px solid hsl(220, 14%, 75%);
   border-radius: 100%;
 }
 
-/* main section */
+/* body section */
 
 main {
   display: grid;
@@ -137,22 +139,22 @@ main {
   padding-top: 50px;
 }
 
-.image-section {
+.image_section {
   position: relative;
 }
 
-.main-img {
+.rendered_img {
   height: 350px;
   cursor: pointer;
 }
 
-.main-img > img {
+.rendered_img > img {
   height: 100%;
   border-radius: 10px;
 }
 
 .arrow {
-  background-color: var(--White);
+  background-color: #fff;
   border-radius: 100%;
   height: 60px;
   width: 60px;
@@ -163,7 +165,7 @@ main {
 }
 
 .arrow:hover {
-  color: var(--Orange);
+  color: hsl(26, 100%, 55%);
 }
 
 .arrow-left,
@@ -180,7 +182,7 @@ main {
   right: 0;
 }
 
-.Thumbnails-main {
+.thumbnailsContainer {
   display: flex;
   gap: 2rem;
   margin-top: 20px;
@@ -195,13 +197,13 @@ main {
 .thumbnails:hover > img {
   opacity: 0.5;
   transform: translate(-5px, 0);
-  transition: 1s ease;
+  transition: transform 1s ease;
 }
 
 .active {
   opacity: 0.5;
-  border: 2px solid var(--Orange);
-
+  border: 2px solid hsl(26, 100%, 55%);
+  border: 2px solid hsl(26, 100%, 55%);
 }
 
 .thumbnails > img {
@@ -214,8 +216,8 @@ main {
   margin-top: 40px;
 }
 
-.company-name {
-  color: var(--Very-dark-blue);
+.company_name {
+  color: hsl(220, 13%, 13%);
   text-transform: uppercase;
   font-weight: 700;
   font-size: 14px;
@@ -224,38 +226,38 @@ main {
 .product {
   font-size: 30px;
   line-height: 35px;
-  color: var(--Very-dark-blue);
+  color: hsl(220, 13%, 13%);
   padding: 10px 0;
 }
 
-.details {
+.product_detail {
   line-height: 22px;
   font-size: 14px;
 }
 
-.price-discount {
+.price_discount {
   display: flex;
   align-items: center;
   gap: 1rem;
   margin-top: 10px;
 }
 
-.price-discount :first-child {
-  color: var(--Very-dark-blue);
+.price_discount :first-child {
+  color: hsl(220, 13%, 13%);
   font-size: 18px;
   font-weight: 700;
 }
 
-.price-discount :last-child {
-  background-color: var(--Very-dark-blue);
+.price_discount :last-child {
+  background-color: hsl(220, 13%, 13%);
   padding: 5px 8px;
   font-size: 13px;
   border-radius: 5px;
-  color: var(--White);
+  color: hsl(223, 64%, 98%);
   font-weight: 700;
 }
 
-.price > :last-child {
+.price-plan > :last-child {
   text-decoration: line-through;
   font-size: 14px;
   margin-top: 3px;
@@ -274,7 +276,7 @@ main {
 }
 
 .addtocart > div {
-  background-color: var(--Light-grayish-blue);
+  background-color: hsl(223, 64%, 98%);
   padding: 15px 20px;
   text-align: center;
   display: flex;
@@ -289,12 +291,12 @@ main {
 
 button {
   width: 100%;
-  background-color: var(--Orange);
+  background-color: hsl(26, 100%, 55%);
   border: none;
   display: flex;
   justify-content: center;
   align-items: center;
-  color: var(--Very-dark-blue);
+  color: #fff;
   font-size: 12px;
   border-radius: 5px;
   height: 40px;
@@ -309,20 +311,20 @@ button > img {
 button:hover {
   transform: translateY(-3px);
   opacity: 0.5;
-  transition: 0.5s ease-in;
+  transition: transform 0.5s ease-in;
 }
 
 .message {
   padding: 10px 20px;
   width: auto;
   height: 40px;
-  color: var(--White);
-  background-color: var(--Orange);
+  color: #fff;
+  background-color: hsl(26, 100%, 55%);
   position: absolute;
   top: 3vh;
   right: 0;
   transform: translateX(700px);
-  transition: 1s ease;
+  transition: transform 1s ease;
 }
 
 .message1.render,
@@ -370,14 +372,14 @@ button:hover {
 }
 
 .name {
-  border-bottom: 1px solid var(--Light-grayish-blue) ;
+  border-bottom: 1px solid hsl(220, 14%, 75%);
   padding-bottom: 20px;
 }
 
 .addedCartContainer {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-around;
   padding: 5px;
   margin: 10px 0;
 }
@@ -398,8 +400,8 @@ button:hover {
 
 b,
 .name {
-  color: var(--Light-grayish-blue);
-  font-weight: bold;
+  color: hsl(220, 13%, 13%);
+  font-weight: 400;
 }
 
 .trash {
@@ -414,7 +416,7 @@ b,
 }
 
 .modalarrow {
-  background-color: var(--White);
+  background-color: #fff;
   border-radius: 100%;
   height: 40px;
   width: 40px;
@@ -481,19 +483,19 @@ img[src="./images/icon-close.svg"] {
   .menu_items {
     position: absolute;
     left: 0;
-    background-color: var(--Light-grayish-blue);
+    background-color: #fff;
     width: 50%;
     height: 90vh;
     top: 10vh;
     z-index: 999;
     transform: translateX(-100%);
-    transition: 0.5s ease-in-out;
+    transition: transform 0.5s ease-in-out;
   }
 
   .menu_items li {
     display: block;
     padding: 20px 0;
-    color: var(--Black);
+    color: #000;
     display: flex;
     justify-content: flex-start;
     padding-left: 20px;
@@ -514,7 +516,7 @@ img[src="./images/icon-close.svg"] {
     }
   }
 
-  .bars {
+  .burger {
     visibility: visible;
     margin-right: 15px;
     border: none;
@@ -524,18 +526,18 @@ img[src="./images/icon-close.svg"] {
     align-items: normal;
   }
 
-  .main-img {
+  .rendered_img {
     height: auto;
-    width: 100w;
+    width: 100vw;
   }
 
-  .main-img > img {
-    height: 100%;
+  .rendered_img > img {
+    height: auto;
     width: 100%;
     border-radius: 0px;
   }
 
-  .Thumbnails-main {
+  .thumbnailsContainer {
     display: none;
   }
 
@@ -549,20 +551,20 @@ img[src="./images/icon-close.svg"] {
     max-width: none;
   }
 
-  .price {
+  .price-plan {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     margin: 20px 0;
   }
 
-  .price-discount > :last-child,
-  .price-discount {
+  .price-plan > :last-child,
+  .pricing_discount {
     margin: 0;
     font-size: 18px;
   }
 
-  .price-discount :first-child {
+  .price_discount :first-child {
     font-size: 20px;
   }
 
@@ -582,7 +584,11 @@ img[src="./images/icon-close.svg"] {
     height: 60px;
   }
 
-  .modalMain {
+  footer {
+    display: none;
+  }
+
+  .modalRendered {
     width: 90vw;
   }
 

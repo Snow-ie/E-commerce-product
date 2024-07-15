@@ -2,104 +2,96 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- displays site properly based on user's device -->
-
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400 700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
-
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
+  <link rel="stylesheet" href="style.css" type="text/css" />
   <title>Frontend Mentor | E-commerce product page</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-
 </head>
 
 <body>
+  <header>
+    <nav class="navbar">
+      <div class="menu">
+        <div class="burger">
+          <div class="bar1"></div>
+          <div class="bar2"></div>
+          <div class="bar3"></div>
+        </div>
 
-  <nav class="navbar">
-    <div class="menu">
-      <div class="bars">
-        <div class="bar1"></div>
-        <div class="bar2"></div>
-        <div class="bar3"></div>
+        <div id="Logo">
+          <h2>sneakers</h2>
+        </div>
+        <ul class="menu_items">
+          <li><a href="#">Collections</a></li>
+          <li><a href="#">Men</a></li>
+          <li><a href="#">Women</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
       </div>
 
-      <div id="Logo">
-        <h1>sneakers</h1>
+      <div class="cart_sect">
+        <figcaption class="cartBtn">
+          <img src="images/icon-cart.svg" alt="cart icon" />
+          <div class="notification">1</div>
+        </figcaption>
+
+        <figcaption id="avatar">
+          <img src="images/image-avatar.png" alt="avatar" />
+        </figcaption>
       </div>
-      <ul class="menu_items">
-        <li><a href="#">Collections</a></li>
-        <li><a href="#">Men</a></li>
-        <li><a href="#">Women</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Contact</a></li>
-      </ul>
+    </nav>
+
+    <!-- rendered cart that's been selected -->
+    <div class="cart hide">
+      <div class="name">Cart</div>
     </div>
-
-    <div class="cart-sect">
-      <figcaption class="cart-btn">
-        <img src="images/icon-cart.svg" alt="cart-icon" />
-        <div class="notification">1</div>
-      </figcaption>
-
-      <figcaption id="avatar">
-        <img src="images/image-avatar.png" alt="avatar" />
-      </figcaption>
-    </div>
-  </nav>
-
-  <!-- rendered cart that's been selected -->
-  <div class="cart-hide">
-    <div class="name">Cart</div>
-  </div>
   </header>
+
   <main>
-    <section class="image-section">
+    <section class="image_section">
       <div class="arrow arrow-left">
-        <img src="images/icon-previous.svg" alt="icon-previous" />
+        <img src="images/icon-previous.svg" alt="icon previous" />
       </div>
       <div class="arrow arrow-right">
-        <img src="images/icon-next.svg" alt="icon-next" />
+        <img src="images/icon-next.svg" alt="icon next" />
       </div>
-      <figcaption class="main-img">
-        <img src="images/image-product-1.jpg" alt="image-product1" />
+      <figcaption class="rendered_img">
+        <img src="images/image-product-1.jpg" alt="image product one" />
       </figcaption>
 
-      <div class="Thumbnails-main">
+      <div class="thumbnailsContainer">
         <figcaption class="thumbnails">
-          <img src="images/image-product-1-thumbnail.jpg" alt="Thumbnail-1" class="active" />
+          <img src="images/image-product-1.jpg" alt="image product 1" class="active" />
         </figcaption>
 
         <figcaption class="thumbnails">
-          <img src="images/image-product-2-thumbnail.jpg" alt="image-product2" />
+          <img src="images/image-product-2-thumbnail.jpg" alt="image product 2" />
         </figcaption>
 
         <figcaption class="thumbnails">
-          <img src="images/image-product-3-thumbnail.jpg" alt="image-product3" />
+          <img src="images/image-product-3-thumbnail.jpg" alt="image product 3" />
         </figcaption>
 
         <figcaption class="thumbnails">
-          <img src="images/image-product-4-thumbnail.jpg" alt="image-product4" />
+          <img src="images/image-product-4-thumbnail.jpg" alt="image product 4" />
         </figcaption>
       </div>
     </section>
 
     <section class="details">
-      <p class="company-name">Sneaker Company</p>
+      <p class="company_name">Sneaker Company</p>
       <h2 class="product">Fall Limited Edition Sneakers</h2>
-      <p class="product-detail">
+      <p class="product_detail">
         These low-profile sneakers are your perfect casual wear companion.
         Featuring a durable rubber outer sole, they’ll withstand everything
         the weather can offer.
       </p>
 
-      <div class="price">
-        <div class="price-discount">
+      <div class="price-plan">
+        <div class="price_discount">
           <p>$125.00</p>
           <p>50%</p>
         </div>
@@ -108,13 +100,13 @@
 
       <div class="addCart-section">
         <div class="addtocart">
-          <div><img src="images/icon-minus.svg" alt="icon-minus" /></div>
+          <div><img src="images/icon-minus.svg" alt="icon minus" /></div>
           <div>0</div>
-          <div><img src="images/icon-plus.svg" alt="icon-plus" /></div>
+          <div><img src="images/icon-plus.svg" alt="icon plus" /></div>
         </div>
 
         <button id="button">
-          <img src="images/icon-cart.svg" alt="icon-cart" />Add to cart
+          <img src="images/icon-cart.svg" alt="icon cart" />Add to cart
         </button>
       </div>
 
@@ -129,45 +121,45 @@
   </main>
 
   <!-- modal window -->
-  <section class="image-section modal hide">
-    <img src="images/icon-close.svg" alt="icon-close" />
+  <section class="image_section modal hide">
+    <img src="images/icon-close.svg" alt="icon close" />
     <div class="modalarrow modalarrow-left">
-      <img src="images/icon-previous.svg" alt="icon-previous" />
+      <img src="images/icon-previous.svg" alt="icon previous" />
     </div>
     <div class="modalarrow modalarrow-right">
-      <img src="images/icon-next.svg" alt="icon-next" />
+      <img src="images/icon-next.svg" alt="icon next" />
     </div>
-    <figcaption class="main-img modalMain">
+    <figcaption class="rendered_img modalRendered">
       <img src="images/image-product-1.jpg" alt="image product one" />
     </figcaption>
 
-    <div class="Thumbnails">
+    <div class="thumbnailsContainer">
       <figcaption class="modal_thumbnails">
-        <img src="images/image-product-1-thumbnail.jpg" alt="image-product-1" class="active" />
+        <img src="images/image-product-1.jpg" alt="image product 1" class="active" />
       </figcaption>
 
       <figcaption class="modal_thumbnails">
-        <img src="images/image-product-2-thumbnail.jpg" alt="image-product-2" />
+        <img src="images/image-product-2-thumbnail.jpg" alt="image product 2" />
       </figcaption>
 
       <figcaption class="modal_thumbnails">
-        <img src="images/image-product-3-thumbnail.jpg" alt="image-product-3" />
+        <img src="./images/image-product-3.jpg" alt="image product 3" />
       </figcaption>
 
       <figcaption class="modal_thumbnails">
-        <img src="images/image-product-4-thumbnail.jpg" alt="image-product-4" />
+        <img src="images/image-product-4-thumbnail.jpg" alt="image product 4" />
       </figcaption>
     </div>
   </section>
 
-
-
-
-
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
-    Coded by <a href="#">Ekeh Pearl</a>.
-  </div>
+  <
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. Coded by
+    </div>
+  <script src="scripts/script.js"></script>
+  <script src="scripts/cart.js"></script>
+  <script src="scripts/modal.js"></script>
 </body>
 
 </html>
